@@ -7,6 +7,29 @@
 //
 
 import Foundation
+import SwiftWebUI
 
-print("Hello, World!")
+struct MainView: View {
 
+  @State private var tasks: [Task] = [
+    Task(name: "Sample Task", createdAt: Date(), isFinished: false)
+  ]
+
+  var body: some View {
+    Form {
+      Section(header: Text("Task App").font(.title)) {
+        TaskInputView(action: { text in
+          let task = Task(name: text, createdAt: Date(), isFinished: false)
+          self.tasks.append(task)
+        })
+        Spacer(minLength: 12)
+        Text("Task List")
+          .font(.title)
+          .bold()
+        List(tasks.identified(by: \.id)) { TaskRow(task: $0) }
+      }
+    }
+  }
+}
+
+SwiftWebUI.serve(MainView())

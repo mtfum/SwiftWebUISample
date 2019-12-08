@@ -3,11 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		268A5F1F239CE7410004D04B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A5F1E239CE7410004D04B /* main.swift */; };
+		268A5F27239CE74E0004D04B /* SwiftWebUI in Frameworks */ = {isa = PBXBuildFile; productRef = 268A5F26239CE74E0004D04B /* SwiftWebUI */; };
+		268A5F2B239CE8650004D04B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A5F2A239CE8650004D04B /* Task.swift */; };
+		268A5F2D239CE8E90004D04B /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A5F2C239CE8E90004D04B /* TaskRow.swift */; };
+		268A5F31239CEC390004D04B /* TaskInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A5F30239CEC390004D04B /* TaskInputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,9 @@
 /* Begin PBXFileReference section */
 		268A5F1B239CE7410004D04B /* SwiftWebUISample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftWebUISample; sourceTree = BUILT_PRODUCTS_DIR; };
 		268A5F1E239CE7410004D04B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		268A5F2A239CE8650004D04B /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		268A5F2C239CE8E90004D04B /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
+		268A5F30239CEC390004D04B /* TaskInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskInputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				268A5F27239CE74E0004D04B /* SwiftWebUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +66,9 @@
 			isa = PBXGroup;
 			children = (
 				268A5F1E239CE7410004D04B /* main.swift */,
+				268A5F2A239CE8650004D04B /* Task.swift */,
+				268A5F2C239CE8E90004D04B /* TaskRow.swift */,
+				268A5F30239CEC390004D04B /* TaskInputView.swift */,
 			);
 			path = SwiftWebUISample;
 			sourceTree = "<group>";
@@ -78,6 +89,9 @@
 			dependencies = (
 			);
 			name = SwiftWebUISample;
+			packageProductDependencies = (
+				268A5F26239CE74E0004D04B /* SwiftWebUI */,
+			);
 			productName = SwiftWebUISample;
 			productReference = 268A5F1B239CE7410004D04B /* SwiftWebUISample */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +120,9 @@
 				Base,
 			);
 			mainGroup = 268A5F12239CE7400004D04B;
+			packageReferences = (
+				268A5F25239CE74E0004D04B /* XCRemoteSwiftPackageReference "SwiftWebUI" */,
+			);
 			productRefGroup = 268A5F1C239CE7410004D04B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -121,6 +138,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				268A5F1F239CE7410004D04B /* main.swift in Sources */,
+				268A5F2B239CE8650004D04B /* Task.swift in Sources */,
+				268A5F2D239CE8E90004D04B /* TaskRow.swift in Sources */,
+				268A5F31239CEC390004D04B /* TaskInputView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +304,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		268A5F25239CE74E0004D04B /* XCRemoteSwiftPackageReference "SwiftWebUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftWebUI/SwiftWebUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		268A5F26239CE74E0004D04B /* SwiftWebUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 268A5F25239CE74E0004D04B /* XCRemoteSwiftPackageReference "SwiftWebUI" */;
+			productName = SwiftWebUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 268A5F13239CE7400004D04B /* Project object */;
 }
